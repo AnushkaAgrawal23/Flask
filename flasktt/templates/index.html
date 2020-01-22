@@ -1,0 +1,24 @@
+<html>
+<head>
+	<title>Home Page</title>
+</head>
+<body>
+	<h1>My Friends</h1>
+
+	{% if number >10 %}
+	   <p>{{number}} is greater than 10</p>
+    {% else %}
+       <p>{{number}} is smaller than 10 </p>
+    {% endif %}      
+	{% for f in my_friends %}
+	  <h2>  {{f}}  </h2>
+    {% endfor %}
+     
+     <form method = "POST",action = "/submit">
+     	<input type = "text" name = "username" placeholder = "Enter Your Name">
+
+     	<input type = "submit">
+
+    </form>
+</body>
+</html>
